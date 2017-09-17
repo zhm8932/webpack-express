@@ -1,0 +1,19 @@
+### OSX ###
+.DS_Store
+.AppleDouble
+Thumbs.db
+
+### Node ###
+# Logs
+logs
+*.log
+
+# Dependency directory
+node_modules
+public
+yarn.lock
+
+.git
+.idea
+.settings
+*.zip
