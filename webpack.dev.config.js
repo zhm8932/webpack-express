@@ -2,13 +2,13 @@
  * Created by 91608 on 2017/9/17.
  */
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const ROOT = path.resolve(__dirname);
 const SRC_PATH = path.join(ROOT,'src');
 const publicPath = 'http://localhost:4000/';
 const merge = require('webpack-merge');
 const webpackConfig = require('./webpack.config');
+
 module.exports = merge(webpackConfig,{
 	devtool: 'source-map',
 	module: {
@@ -27,7 +27,7 @@ module.exports = merge(webpackConfig,{
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(), // 启用 HMR
-		new webpack.NoEmitOnErrorsPlugin()
+		new webpack.NoEmitOnErrorsPlugin()  //编译出现错误时,跳过该阶段
 	],
 	devServer:{
 		proxy:{

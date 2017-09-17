@@ -7,7 +7,9 @@
 - SASS
 
 安装依赖模块
+```
 npm install / yarn install
+```
 
 启动node服务
 ```

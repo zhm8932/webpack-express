@@ -8,6 +8,7 @@ const SRC_PATH = path.join(ROOT,'src');
 const publicPath = 'http://localhost:4000/';
 module.exports = {
 	entry:{
+		vendors:['jquery','react','react-dom'],
 		index:path.join(SRC_PATH,'js/index.js'),
 		users:path.join(SRC_PATH,'js/users.js'),
 		about:path.join(SRC_PATH,'js/about.js'),
@@ -17,7 +18,8 @@ module.exports = {
 		filename: "js/[name].js",
 		publicPath:publicPath
 	},
-	devtool: 'source-map',
+	// devtool: 'source-map',
+	// devtool: 'inline-source-map',
 	resolve: {
 		extensions: ['.js','.jsx','.json','.scss'],
 		alias:{
@@ -62,6 +64,14 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new webpack.optimize.CommonsChunkPlugin({name:'common',minChunks:2}),
+		new webpack.ProvidePlugin({
+			$: "jquery",
+			jQuery: "jquery",
+			"window.jQuery": "jquery",
+			'React':'react',
+			'ReactDOM':'react-dom',
+		}),
+		new webpack.optimize.CommonsChunkPlugin({name:'common',minChunks:3}), //模块必须被3个才会共享
+		// new webpack.optimize.CommonsChunkPlugin({name:'vendors',minChunks:'Infinity'})
 	]
 }

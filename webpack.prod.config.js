@@ -6,10 +6,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const ROOT = path.resolve(__dirname);
-const SRC_PATH = path.join(ROOT,'src');
-const publicPath = '/';
 const webpackConfig = require('./webpack.config');
+
 module.exports = merge(webpackConfig,{
 	module: {
 		rules:[
@@ -18,7 +16,10 @@ module.exports = merge(webpackConfig,{
 				use:ExtractTextPlugin.extract({  //开发环境分离css时，热更新无效
 					fallback:'style-loader',
 					use: [{
-						loader: "css-loader"
+						loader: "css-loader",
+						options: {
+							minimize: true // css压缩
+						}
 					}, {
 						loader: "sass-loader"
 					}],
@@ -27,10 +28,34 @@ module.exports = merge(webpackConfig,{
 		]
 	},
 	plugins: [
+		new webpack.DefinePlugin({
+			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
+		}),
+		// 若要按需加载 CSS 则请注释掉该行
 		new ExtractTextPlugin('css/[name].css',{
 			allChunks : true
 		}),
-		// new webpack.HotModuleReplacementPlugin(), // 启用 HMR
-		new webpack.NoEmitOnErrorsPlugin()
+		// new webpack.NoErrorsPlugin(),	//不显示错误插件
+		new webpack.optimize.UglifyJsPlugin({
+			mangle:{ //不混淆压缩
+				except:['$','exports','require'],
+				screw_ie8: true,
+				keep_fnames: true
+			},
+			compress:{
+				warnings:false,
+				screw_ie8: true
+			},
+			beautify: false,
+			comments: false
+		}),
+		new CleanWebpackPlugin(
+			['public',],　 //匹配删除的文件
+			{
+				root: __dirname,       　　　　　　　　　　//根目录
+				verbose:  true,        　　　　　　　　　　//开启在控制台输出信息
+				dry:      false        　　　　　　　　　　//启用删除文件
+			}
+		)
 	],
 })

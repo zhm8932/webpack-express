@@ -3,6 +3,7 @@
  */
 // import '../../../sass/global.scss'
 import 'sass/global.scss';
+import 'jquery.cookie';
 export const util  = require('./util');
 
 export function getName(name) {
