@@ -50,11 +50,12 @@ module.exports = merge(webpackConfig,{
 			comments: false
 		}),
 		new CleanWebpackPlugin(
-			['public',],　 //匹配删除的文件
+			['public/js','public/css'],　 //匹配删除的文件
 			{
 				root: __dirname,       　　　　　　　　　　//根目录
 				verbose:  true,        　　　　　　　　　　//开启在控制台输出信息
-				dry:      false        　　　　　　　　　　//启用删除文件
+				dry:      false,        　　　　　　　　　　//启用删除文件
+				exclude: ["vendors.js","vendors.manifest.json"] //排除不删除的目录，主要用于避免删除公用的文件
 			}
 		)
 	],

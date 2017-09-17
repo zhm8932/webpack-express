@@ -8,7 +8,7 @@ const SRC_PATH = path.join(ROOT,'src');
 const publicPath = 'http://localhost:4000/';
 module.exports = {
 	entry:{
-		vendors:['jquery','react','react-dom'],
+		// vendors:['jquery','react','react-dom'],
 		index:path.join(SRC_PATH,'js/index.js'),
 		users:path.join(SRC_PATH,'js/users.js'),
 		about:path.join(SRC_PATH,'js/about.js'),
@@ -72,6 +72,9 @@ module.exports = {
 			'ReactDOM':'react-dom',
 		}),
 		new webpack.optimize.CommonsChunkPlugin({name:'common',minChunks:3}), //模块必须被3个才会共享
-		// new webpack.optimize.CommonsChunkPlugin({name:'vendors',minChunks:'Infinity'})
+		new webpack.DllReferencePlugin({
+			context:__dirname,  //context：需要跟之前保持一致，这个用来指导webpack匹配manifest.json中库的路径
+			manifest:require('./public/vendors.manifest.json') //用来引入刚才输出的manifest.json文件
+		}),
 	]
 }

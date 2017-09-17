@@ -13,7 +13,7 @@ getIndex()
 console.log("首页422:",$());
 var  Hello = React.createClass({
 	render(){
-		return <p>Hello React2222!!!!</p>
+		return <p>Hello React2222333444!!!!</p>
 	}
 })
 ReactDOM.render(<Hello/>,document.querySelector('.app'));
