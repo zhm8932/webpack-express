@@ -1,0 +1,10 @@
+{
+  "presets": [
+    "es2015","react","stage-2"
+  ],
+  "env":{
+    "development":{
+      "presets":["react-hmre"]  // babel-preset-react-hmre：让Babel知道HMR（热替换），涉及到了webpack.config.js里loader为babel（也就是js、jsx使用babel-loader地方）的配置
+    }
+  }
+}

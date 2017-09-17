@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/*
+* reset.css
+* Author:haiming.zeng
+* Ver 1.0
+* Date:2016/12/19
+*/
+/*
+* reset 清除默认属性
+*/
+
+body, html, h1, h2, h3, h4, h5, h6, p, em, i, form, ul, ol, li, dl, dt, dd, figure, address, time, aside, button {
+  padding: 0;
+  margin: 0; }
+html{font-size: 62.5%;}
+body {
+  line-height: 24px;
+  width: 100%;
+  font-size:1.4rem;
+  font-family:'微软雅黑',FontAwesome, Helvetica,Arial,sans-serif;
+}
+select,button,input{line-height:3rem;height:3rem;box-sizing: border-box;font-family:'微软雅黑',FontAwesome, Helvetica,Arial,sans-serif;  }
+button{border: none;background: none;outline: none;}
+textarea{box-sizing: border-box;font-family:'微软雅黑',FontAwesome, Helvetica,Arial,sans-serif;padding:2px 0.5rem;box-sizing: border-box;  }
+
+em, u, i, b, address {
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none; }
+
+ul, li {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 14px;
+  font-weight: normal; }
+
+mark {
+  background: none; }
+
+a {
+  text-decoration: none;color: #666;
+  outline: none; }
+
+a img {
+  border: none;
+  display: block; }
+
+input[type="submit"], input.submit {
+  cursor: pointer; }
+
+input[type="text"], input.text {
+  padding: 0px;
+  line-height: 24px; }
+
+input {
+  -webkit-appearance: none;outline: none }
+
+/* html5支持,需配合html5.js */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* br属性 */
+br {
+  display: inline;
+  line-height: 20px; }
+
+/* 溢出部分隐藏 */
+.of {
+  overflow: hidden; }
+
+/* 加亮的颜色 */
+/* 左右浮动 */
+.lt {
+  float: left; }
+
+.rt {
+  float: right; }
+
+/*对齐*/
+.tc {
+  text-align: center; }
+
+.tl {
+  text-align: left; }
+
+.tr {
+  text-align: right; }
+
+/* 左右浮动后清除浮动 */
+.clear {
+  clear: both; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.clearfix {
+  *zoom: 1; }
+
+
+/* 版块之间的上下空隙 */
+.blankBox {
+  height: 30px;
+  width: 100%;
+  clear: left;
+  display: block; }
+
+/* 带有换行的连续性盒子 */
+.fz {
+  font-size: 0; }
+
+
+/* 带有图片Box */
+.img, .img img {
+  display: block;
+  overflow: hidden; }

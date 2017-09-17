@@ -1,0 +1,25 @@
+$headBg:#0fa5f9;
+$white:#FFF;
+
+$color-gray-3:#333;
+$color-gray-6:#666;
+$color-gray-9:#999;
+$color-gray-c:#ccc;
+
+$color-gray-f5:#f5f5f5;
+
+$color-blue-388:#388CF8;
+$color-blue-4c7:#4c7ee9;
+$color-red-f00:#F0021F;
+//箭头  $origin:旋转中心  $bgColor：背景颜色  $rotateX,$rotateY 旋转方向
+@mixin arrow($origin:0% 100%,$bgColor:$white,$rotateX:50,$rotateY:-50){
+  width:20px;height:22px;display: block;position: absolute;top: 50%;margin-top: -1rem;
+  &:before,&:after{
+    height: 1px;width: 12px;content: '';background:$bgColor;position: absolute;left: 0px;top:50%;
+    transform-origin:$origin;
+    transform: rotate($rotateX+deg);
+  }
+  &:after{
+    transform: rotate($rotateY+deg);
+  }
+}

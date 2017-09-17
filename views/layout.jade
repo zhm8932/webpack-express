@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/common.css')
+    block styles
+  body
+    include includes/header
+    block content
+
+    script(src='/js/common.js')
+    block scripts
