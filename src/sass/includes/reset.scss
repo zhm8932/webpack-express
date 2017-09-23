@@ -3,7 +3,7 @@
 * reset.css
 * Author:haiming.zeng
 * Ver 1.0
-* Date:2016/12/19
+* Date:2017/09/18
 */
 /*
 * reset 清除默认属性
@@ -15,11 +15,10 @@ body, html, h1, h2, h3, h4, h5, h6, p, em, i, form, ul, ol, li, dl, dt, dd, figu
 html{font-size: 62.5%;}
 body {
   line-height: 24px;
-  width: 100%;
   font-size:1.4rem;
   font-family:'微软雅黑',FontAwesome, Helvetica,Arial,sans-serif;
 }
-select,button,input{line-height:3rem;height:3rem;box-sizing: border-box;font-family:'微软雅黑',FontAwesome, Helvetica,Arial,sans-serif;  }
+select,button,input{line-height:26px;height:26px;box-sizing: border-box;font-family:'微软雅黑',FontAwesome, Helvetica,Arial,sans-serif;  }
 button{border: none;background: none;outline: none;}
 textarea{box-sizing: border-box;font-family:'微软雅黑',FontAwesome, Helvetica,Arial,sans-serif;padding:2px 0.5rem;box-sizing: border-box;  }
 
@@ -69,7 +68,6 @@ br {
 .of {
   overflow: hidden; }
 
-/* 加亮的颜色 */
 /* 左右浮动 */
 .lt {
   float: left; }

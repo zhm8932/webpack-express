@@ -1,3 +1,15 @@
+@media only  screen and (min-width: 1920px){
+  .wrapper{ width:1152px;}
+}
+@media only  screen and (min-width: 1440px) and (max-width: 1919px){
+  .wrapper{ width:1024px;}
+}
+@media only  screen and (min-width: 769px) and (max-width: 1439px){
+  .introduce-right{
+    img{width: 80%}
+  }
+}
+
 @media only screen and (max-width: 768px){
   .wrapper{width: 100%}
   .fixed{margin: 0px;left: 0px;}

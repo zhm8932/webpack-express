@@ -4,22 +4,36 @@
 import '../sass/index.scss';
 //
 import * as utils from './libs/utils';
-
-console.log("utils:",utils)
-let getIndex = ()=>{
-	console.log("this is index")
-}
-getIndex()
-console.log("首页422:",$());
-var  Hello = React.createClass({
-	render(){
-		return <p>Hello React2222333444!!!!</p>
-	}
-})
-ReactDOM.render(<Hello/>,document.querySelector('.app'));
+import 'slides';
 $(function () {
-	$('.main').html('<p>更新首页内容!</p>')
 	$.cookie('phone','13688889999');
 	let phone = $.cookie('phone');
 	console.log("phone:",phone)
+
+	function initTouchSlider({width,height}) {
+		$('.banner').slidesjs({
+			width: width,
+			height: height,
+			navigation: false,
+			play: {
+				active: false,
+				auto: true,
+				interval: 6000,
+				swap: true
+			},
+			effect: {
+				slide: {
+					speed: 1000
+				}
+			}
+
+		});
+	}
+	initTouchSlider({width:1920,height:678})
+
+	$('.advantage').on('mouseover','.hd span',function () {
+		let index = $(this).index();
+		$(this).addClass('on').siblings().removeClass('on')
+		$('.advantage').find('.bd p').eq(index).fadeIn().siblings().hide();
+	})
 })

@@ -1,0 +1,62 @@
+@import "includes/settings";
+
+.contacts{
+  header{
+    padding: 2rem 0;
+    h2{font-size: 1.6rem;font-weight: bold;}
+  }
+}
+.advantage{
+  figure{
+    width: 25%;float: left;text-align: center;
+  }
+}
+
+.partner{
+  padding:0 50px;position: relative;
+  //dl{
+  //  width: 90%;margin: 0 auto;
+  //}
+  dt,dd{
+    border: 1px solid $color-gray-f6;width:48%;float: left;height: 90px;margin: 0 1%;
+    box-sizing: border-box;overflow: hidden;
+  }
+  dt{
+    text-align: center;display: table-cell;line-height: 90px;
+    img{display: inline-block;vertical-align: middle;}
+  }
+  dd{
+    padding: 10px;text-indent: 2rem;
+  }
+  .slidesjs-navigation{
+    position: absolute;left: 0px;top: 50%;transform: translateY(-50%);
+    .iconfont{
+      font-size: 4rem;font-weight: bold;color: $color-gray-9;
+    }
+  }
+  .slidesjs-previous{
+  }
+  .slidesjs-next{left: auto;right: 0px;}
+}
+.form{
+  width: 350px;float: left;
+  label{padding-right: 0px;}
+  input,select{
+    border: 1px solid $color-gray-9;padding: 0 0.5rem;box-sizing: border-box;font-size: 1.4rem;
+    width: calc(100% - 80px);line-height: 30px;height: 30px;border-radius: 4px;
+  }
+  textarea{
+    width: calc(100% - 80px);border-radius: 4px;height: 60px;
+  }
+  li{
+    padding: 10px 0;
+  }
+}
+.map{
+  width: calc(100% - 400px);float: right;
+  img{width: 100%;}
+}
+.submit-box{
+  padding-left: 80px;padding-top: 20px;
+  .btn{background-color: $color-red-f00;color: $white;padding: 0 3rem;border-radius: 3px;}
+}

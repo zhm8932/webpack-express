@@ -1,0 +1,23 @@
+extends ../layout
+
+block styles
+  link(rel='stylesheet',href='/css/news/index.css')
+block content
+  section.wrapper.list-wrapper
+    header
+      h2 员工风采
+    .list
+      ul.clearfix(data-pageCount=pageCount,data-pageSize=query.pageSize,data-pageNo=query.pageNo)
+        include ./common/news_li
+        //-each item in data
+          li: a(href='/news/article/1')
+            img(data-original=item.goodsPicURL alt=item.goodsName)
+            p #{item.goodsName}
+    //-.list.clearfix
+      ul
+        -for(var i=0;i<18;i++)
+          li: a(href='/news/article/1')
+            img(src='/images/staff01.png')
+            p 这里是新闻标题这里是新闻标题这里是新闻标题这里是新闻标题
+block scripts
+  script(src='/js/news/list.js')

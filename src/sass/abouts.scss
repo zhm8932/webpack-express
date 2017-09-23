@@ -1,0 +1,76 @@
+@import "includes/settings";
+.tit{
+  background-color: $white;
+  .wrapper{
+    border-bottom: 1px solid $color-orange-e6a;margin-bottom: -1px;
+  }
+  span{
+    margin-right:30px;display: inline-block;line-height:40px;cursor: pointer;
+    .iconfont{display: none;}
+    &.on,&:hover{
+      position: relative;
+      .iconfont{
+        position: absolute;bottom: 0px;left: 50%;transform: translateX(-50%);display: block;
+        color: $color-orange-e6a;line-height: 18px;height: 12px;font-size: 1.8rem;
+      }
+    }
+  }
+}
+.fixed{
+  border-bottom: 1px solid $color-orange-e6a;width: 100%;
+}
+.about{
+  h2{
+    padding:30px 0 20px;
+    font-size: 1.8rem;font-weight: bold;
+  }
+  img{margin: 0 auto;display: block;}
+}
+.brief{
+  img{float: left;margin-right:2rem;}
+  figcaption{
+    text-indent: 2rem;
+  }
+}
+.introduce{
+  margin-bottom: 4rem;
+  .hd{
+    border-bottom: 1px solid $color-gray-9;text-align: center;
+    margin-bottom: 2rem;font-size: 1.6rem;
+    span{
+      line-height:50px;height:50px;padding: 0 20px;position: relative;display: inline-block;
+      .iconfont{
+        position: absolute;left: 50%;transform: translateX(-50%);width: 12px;height: 12px;line-height: 16px;
+        bottom: -2px;color: $color-gray-9;
+        border-bottom:1px solid $white;font-size: 20px;
+        box-shadow:inset 0px -1px 0 $white;display: none;
+        &:before{margin-left: -4px;}
+      }
+      &.on,&:hover{font-weight: bold;color: $color-orange-e6a;
+        .iconfont{display: block;}
+      }
+    }
+  }
+  .bd{
+    background-color: $color-gray-f6;padding:20px 0;
+    aside{display: none;
+      &:first-child{display: block;}
+    }
+  }
+}
+.introduce-left{
+  float: left;width: calc(100% - 350px);
+  dt{
+    padding: 30px 0 20px 30px;line-height: 40px;
+    h3{font-size: 4rem;line-height: 4rem;font-weight: bold;padding: 10px 0;}
+    h4{font-size: 3rem;font-weight: bold}
+    p{font-size: 1.6rem;}
+  }
+  dd{
+    figure{width: 25%;float: left;text-align: center;}
+  }
+}
+.introduce-right{
+  width: 300px;float: right;padding:0  20px ;
+  img{margin: 0 auto}
+}

@@ -1,0 +1,31 @@
+@import "settings";
+.footer{
+  background-color: $color-gray-f6;margin-top: 2rem;padding:30px 0;
+  dl{
+    h4{
+      font-size: 1.6rem;font-weight: bold;padding:0 0 20px  ;
+    }
+    .line{width: 1px;background-color: $color-gray-9;height: 100%;}
+    dd,dt{width: 33.33%;float: left;box-sizing: border-box;overflow: hidden}
+    dt{
+      position: relative;
+      &:after{
+        position: absolute;content: '';border-right:1px solid $color-gray-9 ;
+        right: 12%;width: 1px;height: 100%;
+      }
+      figure{
+        width: 35%;float: left;margin-right: 10%;
+      }
+    }
+    dd{
+      p{line-height: 32px;}
+    }
+    .iconfont{width: 24px;text-align: center;padding-right:8px;display: inline-block;
+      font-size: 1.8rem;position: relative;top: 2px;
+    }
+  }
+}
+.copyright{
+  background-color: $color-gray-3;color: $color-gray-f6;text-align: center;
+  padding: 20px 0;
+}

@@ -3,8 +3,7 @@
  */
 const webpack = require('webpack');
 const path = require('path');
-const ROOT = path.resolve(__dirname);
-const SRC_PATH = path.join(ROOT,'src');
+const {ROOT,PUBLIC_PATH} = require('./commonPath');
 
 module.exports = {
 	entry:{

@@ -1,0 +1,121 @@
+@import "settings";
+//锁屏
+.globalBg {
+  width: 100%;  height: 100%;
+  position: fixed;  left: 0;  top: 0;
+  background:#000;  z-index: 9998;opacity: 0.6;
+  filter:alpha(opacity=60);
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  /*IE4-IE9*/
+  filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+}
+.msgBox{
+  position: fixed; left: 50%; top: 50%;z-index: 99999;padding:1rem 0;display: none;
+   border: 1px solid $color-gray-f6; font-size: 18px;
+  background-color: #FFFFFF; text-align: center;box-sizing: border-box;
+}
+.dialogBox{
+  width: 300px; color: #7a7a7a;  position: fixed; z-index: 9999; left: 50%; top: 50%; margin-left: -150px;margin-top:-50px; font-size: 14px;
+; border-radius: 5px;background-color: #FFFFFF;  text-align: center;
+  overflow: hidden;
+  .inner{position: relative;}
+  .title{
+    text-align: left;padding:0.5rem 0 0.5rem 1rem;border-bottom: 1px solid $color-gray-9;
+  }
+  .close{
+    transition: all 0.3s;text-indent: -9999px;
+    width:20px;height:20px;display: block;position: absolute;right:0.5rem;top:0.5rem;cursor: pointer;
+    &:before,&:after{
+      height: 2px;width: 14px;content: '';background:$color-gray-9;
+      position: absolute;left:50%;top:50%;margin-left:-7px;margin-top: -1px;
+      transform-origin: 50% 50%;
+      transform: rotate(45deg);
+    }
+    &:after{
+      transform: rotate(-45deg);
+    }
+    &:hover{
+      transform: rotate(180deg);
+    }
+  }
+  article{
+     padding:2rem 1rem;
+
+  }
+  textarea{ width: 80%;}
+  .submitBox{
+    height:3rem;line-height:3rem;font-size: 16px;  text-align: center;border-top: 1px solid $color-gray-9;
+    button{
+      display:inline-block;padding:0 20px;border:none;line-height:100%;height:100%;outline:none;text-align: center; cursor: pointer;font-size: 14px;
+      width: 50%;background-color: $white;color: $color-gray-3;
+      font-size: 1.6rem;
+      &.ok{}
+      &.cancel{border-right: 1px solid $color-gray-9;}
+      &.disabled{background-color: $color-gray-9;cursor:default;}
+    }
+
+  }
+  .other{
+    margin-top: -1rem;padding:0 1rem 1rem;text-align: left;
+  }
+
+
+}
+
+.select-box,.select-com{
+  position:relative;
+  display:inline-block;
+  vertical-align: middle;box-sizing: border-box;
+  cursor:pointer;height: 26px;border: 1px solid $color-gray-9;
+  .selected{
+    display:inline-block;  width:100%;  box-sizing:border-box;padding:0 1rem 0 0;
+    position: relative;min-width: 80px;
+    .iconfont{float: right;color: $color-gray-6;position: absolute;right: 0px;top: 0px;
+      font-size: 1.3rem;transform: scale(0.8,1);
+    }
+    .text{display: block;height: 2rem;overflow: hidden;padding:0 0.5rem;}
+  }
+  ul.options{
+    position:absolute;  z-index:999;  top:100%;  left:0;
+    width:100%;max-height:500%;  overflow:scroll;  overflow-x:hidden;
+    display:none;  background:#fff;
+    border:1px solid $color-gray-9;
+    .option{
+      line-height:24px;
+      white-space:nowrap;
+      padding:0 10px;margin: 0px;
+      text-overflow:ellipsis; overflow:hidden;
+      &.active,&:hover{
+        background:$color-orange-e6a;color: $white;
+      }
+    }
+
+  }
+  &.open{
+    ul.options{
+      display:block;box-sizing: border-box;
+    }
+  }
+}
+.pagination{
+  text-align: right;margin: 20px 0;
+  span,a{
+    border: 1px solid $color-gray-9;display: inline-block;padding: 0 10px;line-height:28px;
+    margin: 0 5px;border-radius: 3px;
+    &.current{
+      background-color: $color-orange-e6a;color: $white;border-color: $color-orange-e6a;
+    }
+  }
+  a:hover{
+    background-color: $color-orange-e6a;color: $white;border-color: $color-orange-e6a;
+  }
+  .jump{display: inline-block;
+    .pageNo{
+      width: 30px;border: 1px solid $color-gray-9;margin: 0 3px 0 0;text-align: center;
+      border-radius: 3px;
+    }
+  }
+  .pageCount{padding: 0 5px;}
+  .pager{display: inline-block;}
+
+}

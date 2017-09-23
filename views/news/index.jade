@@ -1,0 +1,39 @@
+extends ../layout
+
+block styles
+  link(rel='stylesheet',href='/css/news/index.css')
+block content
+  .ads
+    img(src='/images/b-news.png')
+  section.wrapper.list-wrapper
+    header
+      h2 员工风采
+      a(href='/news/list/1') 查看更多》
+    .list.clearfix
+      ul
+        -for(var i=0;i<6;i++)
+          li: a(href='/news/article/1')
+            img(data-original='/images/staff01.png')
+            p 这里是新闻标题这里是新闻标题这里是新闻标题这里是新闻标题
+    header
+      h2 企业动态
+      a(href='/news/list/3') 查看更多》
+    .list.clearfix
+      ul
+        -for(var i=0;i<6;i++)
+          li: a(href='')
+            img(data-original='/images/staff01.png')
+            p 这里是新闻标题这里是新闻标题这里是新闻标题这里是新闻标题
+    header
+      h2 媒体报道
+      a(href='/news/list/3') 查看更多》
+    .list.clearfix
+      ul
+        -for(var i=0;i<6;i++)
+          li: a(href='')
+            img(data-original='/images/staff01.png')
+            p 这里是新闻标题这里是新闻标题这里是新闻标题这里是新闻标题
+
+
+block scripts
+  script(src='/js/news/index.js')
