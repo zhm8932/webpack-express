@@ -7,7 +7,7 @@
     "dev": "webpack-dev-server --config ./build/webpack.dev.config.js",
     "build": "cross-env NODE_ENV=production webpack --config ./build/webpack.prod.config.js",
     "dll": "cross-env NODE_ENV=production webpack --config ./build/webpack.dll.config.js",
-    "pack": "npm run dll && npm run build && node archive.js"
+    "pack": "node archive.js"
   },
   "dependencies": {
     "archiver": "^2.0.3",

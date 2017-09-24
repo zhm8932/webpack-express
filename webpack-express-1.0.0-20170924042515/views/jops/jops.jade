@@ -1,0 +1,65 @@
+extends ../layout
+block styles
+  link(rel='stylesheet',href='/css/jops.css')
+block content
+  .ads
+    img(src='/images/b-jop.png')
+  //-section.wrapper
+    .jop-title
+        p 如果你有志于投身于消费金融这个新兴的风口行业，如果你希望和公司一起成长，那就赶快加入我们吧
+        p 请将简历投至 zhaopin@qhsnowball.com
+        p
+          span 五险一金
+          span 高大尚的办公环境
+          span 年度体检
+          span 股票期权
+          span 节日礼金
+  section.wrapper
+    - provinces =[{code:'111',name:'广东'},{code:'222',name:'上海'},{code:'222',name:'上海'},{code:'222',name:'上海'},{code:'222',name:'上海'},{code:'222',name:'上海'},{code:'222',name:'上海'}]
+    .position-wrapper
+      //- var jopType = ['行政','人力资源','市场','产品','数据','风控','项目管理','销售','法务']
+      .position
+        - var jopType = position.jobType
+        each item,index in jopType
+          - var active=''
+          if index==0
+            - active = 'on'
+          span(class=active,data-jobType=item.id) #{item.name}
+            i.iconfont.icon-shangjiantou
+      .region
+        label 职位搜索：
+        .select-box
+          .selected
+            span.text 省份选择
+            input(type='hidden',name='provinces')
+            i.iconfont.icon-xiajiantou
+          ul.options
+            each item in provinces
+              li.option(data-value=item.code) #{item.name}
+        .select-box
+          .selected
+            span.text 城市选择
+            input(type='hidden',name='provinces')
+            i.iconfont.icon-xiajiantou
+          ul.options
+            each item in provinces
+              li.option(data-value=item.code) #{item.name}
+        //-select.provice
+          option(value='' disabled=true selected=true) 省份选择
+          option 广东
+          option 上海
+        //-select.city
+          option(value='' disabled=true selected=true) 城市选择
+          option 广州
+          option 深圳
+  section.wrapper.jop-list
+    .thead
+      span 职位
+      span 类别
+      span 工作地点
+      span 发布时间
+    .tbody(data-pageCount=pageCount)
+      include ./common/jop_list
+
+block scripts
+  script(src='/js/jops.js')

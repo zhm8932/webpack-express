@@ -1,0 +1,70 @@
+extends layout
+block styles
+  link(rel='stylesheet',href='/css/contacts.css')
+block content
+  .ads
+    img(src='/images/b-contact.png')
+  section.wrapper.contacts
+    header
+      h2 商务合作优势
+    .advantage.clearfix
+      figure
+        img(src='/images/c01.png')
+        figcaption 提高门店利润
+      figure
+        img(src='/images/c02.png')
+        figcaption 提高产品销量
+      figure
+        img(src='/images/c03.png')
+        figcaption 提升客户满意度
+      figure
+        img(src='/images/c04.png')
+        figcaption 扩充支付方式
+  section.wrapper.contacts
+    header
+      h2 合作伙伴
+    .partner#partner.clearfix
+      a.slidesjs-previous.slidesjs-navigation(href='#'): i.iconfont.icon-arrow-left
+      a.slidesjs-next.slidesjs-navigation(href='#'): i.iconfont.icon-arrow-right
+      dl
+        dt
+          img(src='/images/logo.png')
+        dd
+          p 明日科技金融是一家明日科技金融是一家明日科技金融是一家明日科技金融是一家明日科技金融是一家明日科技金融是一明日科技金融是一家明日科技金融是一明日科技金融是一家明日科技金融是一家
+      dl
+        dt
+          img(src='/images/logo.png')
+        dd
+          p 明日科技金融是一家明日科技金融是一家明日科技金融是一家明日科技金融是一家明日科技金融是一家明日科技金融是一明日科技金融是一家明日科技金融是一明日科技金融是一家明日科技金融是一家
+
+  section.wrapper.contacts
+    header
+      h2 与我们合作
+    .cooperate.clearfix
+      .form
+        ul
+          li
+            label 您的称呼：
+            input(type='text')
+          li
+            label 联系电话：
+            input(type='text')
+          li
+            label 联系邮箱：
+            input(type='text')
+          li
+            label 合作内容：
+            input(type='text')
+          li
+            label 留言内容：
+            textarea
+        .submit-box
+          button.btn 提交
+      .map
+        img(data-original='/images/map01.png')
+
+
+
+
+block scripts
+  script(src='/js/contacts.js')

@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  .wrapper.errorPage
+    p: img(src='/images/404.png')
+    h4(data-status=error.status)= message
+    a.btn(href='/') 返回首页

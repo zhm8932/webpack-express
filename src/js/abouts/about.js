@@ -16,12 +16,13 @@ $(function () {
 
 	});
 	let topHeight = $('.ads').outerHeight(true)+$('.header').outerHeight(true);
+	let titHeight = $tit.height();
 	let $header = $('.about').find('header');
 	$tit.on('click','span',function () {
 		$(this).addClass('on').siblings().removeClass('on');
 		let curType = $(this).data('type');
 		let offsetTop = '';
-		let titHeight = $tit.height();
+
 		console.log("titHeight:",titHeight)
 		console.log("curType:",curType)
 		$.each($header,function (index,item) {
@@ -37,13 +38,14 @@ $(function () {
 
 	$(window).scroll(function () {
 		let scrollTop = $body.scrollTop();
-		console.log("scrollTop:",scrollTop)
+		// console.log("scrollTop:",scrollTop)
 		if(scrollTop>topHeight){
 			$tit.addClass('fixed')
 			$header.each((index,item)=>{
 				let itemOffsetTop = $(item).offset().top;
+				// console.log("itemOffsetTop：",itemOffsetTop)
 				let id = $(item).attr('id');
-				if(scrollTop>=itemOffsetTop){
+				if(scrollTop>=itemOffsetTop-titHeight){
 					$tit.find('span[data-type='+id+']').addClass('on').siblings().removeClass('on');
 				}
 			})

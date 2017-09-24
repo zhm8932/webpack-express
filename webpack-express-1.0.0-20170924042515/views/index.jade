@@ -1,0 +1,83 @@
+extends layout
+
+block styles
+  link(rel='stylesheet',href='/css/index.css')
+block content
+  .banner
+    a(href='/'): img(src='/images/banner01.png',alt='明日')
+    a(href='/'): img(src='/images/banner01.png',alt='明日')
+    a(href='/'): img(src='/images/banner01.png',alt='明日1')
+  section.wrapper.home
+      header
+        h2 企业优势
+      .advantage
+        .hd.clearfix
+          span.on
+            |消费金融专业的团队
+            i.iconfont.icon-shangjiantou
+          span
+            |庞大密集销售团队
+            i.iconfont.icon-shangjiantou
+          span
+            |全面的金融产品
+            i.iconfont.icon-shangjiantou
+        .bd
+          p: img(data-original='/images/b01.png' alt='消费金融专业的团队')
+          p: img(src='/images/b01.png' alt='庞大密集销售团队')
+          p: img(src='/images/b01.png' alt='全面的金融产品')
+  section.wrapper.home.clearfix
+      header
+        h2 产品简介
+      .brief
+        figure
+          img(data-original='/images/n01.png')
+          figcaption
+            h3 覆盖多种消费场景
+            p
+              span 手机数码
+              span 电脑办公
+            p
+              span 手机数码
+              span 电脑办公
+            p
+              span 手机数码
+              span 电脑办公
+            p
+              span 手机数码
+              span 电脑办公
+        figure
+          img(data-original='/images/n02.png')
+          figcaption
+            h3 放款速度极快
+            p
+              span 审批快
+              span 放款快
+            p
+              span 0抵押
+              span 0担保
+            p
+              span 申请方便
+              span 流程简单
+            p
+              span 利率低
+              span 门槛低
+        figure
+          img(data-original='/images/n03.png')
+          figcaption
+            h3 放款速度极快
+            p
+              span 审批快
+              span 放款快
+            p
+              span 0抵押
+              span 0担保
+            p
+              span 申请方便
+              span 流程简单
+            p
+              span 利率低
+              span 门槛低
+
+
+block scripts
+  script(src='/js/index.js')

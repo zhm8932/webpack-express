@@ -1,0 +1,10 @@
+extends layout
+block styles
+  link(rel='stylesheet',href='/css/about.css')
+block content
+  h2= title
+  .main
+    p Welcome to #{title}
+  .about 关于我们内容
+block scripts
+  script(src='/js/about.js')
