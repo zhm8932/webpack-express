@@ -9,6 +9,10 @@
 安装依赖模块
 ```
 npm install / yarn install
+
+第一次启动服务编译文件
+npm run dll
+
 ```
 
 启动node服务
@@ -24,4 +28,9 @@ npm run dev
 生产环境编译
 ```
 npm run build
+```
+
+生产环境文件打包
+```
+npm run pack
 ```
