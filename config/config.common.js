@@ -14,7 +14,7 @@ var config = {
 
 	//版本配置参数
 	apiType:{
-		msxf:'webservices',
+		services:'webservices',
 		douban:'douban'
 	},
 

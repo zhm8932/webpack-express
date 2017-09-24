@@ -23,8 +23,7 @@ $(function () {
 		console.log("data:",data)
 
 		getJopList(data);
-	})
-
+	});
 	$tbody.on('click','.pagination a',function (e) {
 		e.preventDefault();
 		let page = $(this).data('page');
@@ -35,7 +34,7 @@ $(function () {
 		}
 		getJopList(data)
 
-	})
+	});
 
 	function getJopList(data) {
 		utils.ajax({

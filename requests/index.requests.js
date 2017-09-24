@@ -22,7 +22,7 @@ exports.get_jops_list = function (req,res,next) {
 	proxy(req,res,{
 		method:'POST',
 		path:"WSGetDemandListFacade/getDemandList",
-		apiType: config.apiType.msxf,
+		apiType: config.apiType.services,
 		data:data
 	}).then(function (json) {
 		if(Tools.isAjax(req)){
@@ -44,7 +44,7 @@ exports.get_jops_position = function (req,res,next) {
 	proxy(req,res,{
 		method:'POST',
 		path:"WSGetDemandBasicsFacade/getDemandBasics",
-		apiType: config.apiType.msxf,
+		apiType: config.apiType.services,
 	}).then(function (json) {
 		res.locals.position = json.data;
 		next();
