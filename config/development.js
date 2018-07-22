@@ -4,7 +4,7 @@
 
 var config = {
 	hostname:"api.douban.com",
-	hostnameMsxf:"talents.msxf.com",
+	hostnameVip:"talents.Vip.com",
 	port:'80'
 }
 

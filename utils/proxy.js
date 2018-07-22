@@ -17,7 +17,7 @@ const proxy = function (req,res,opts) {
 		if(opts.apiType=='webservices'){
 			protocol = 'https';
 			path =`/${apiType}/${opts.path}`;
-			hostname = config.hostnameMsxf;
+			hostname = config.hostnameVip;
 		}else if(opts.apiType=='douban'){
 			protocol = 'https';
 			path = `/${v}/${opts.path}`;
